@@ -1,0 +1,10 @@
+{
+  "params": {
+    "local_server": "True",
+    "local_uri" : "mysql+pymysql://root:@localhost/thoughts",
+    "prod_uri" : "mysql+pymysql://root:@localhost/thoughts",
+    "blog_name": "Your Thoughts",
+    "username": "admin",
+    "userpassword": "iamadmin"
+  }
+}

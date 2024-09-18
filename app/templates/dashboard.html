@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('{{ url_for('static',filename = 'assets/img/home-bg.jpg') }}')">
+            <div class="container position-relative px-4 px-lg-5">'
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>ADMIN PANEL</h1>
+                            <span class="subheading">A Blog Theme by Start Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            WELCOME ADMIN
+
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">S. No.</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">date</th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for th in thoughts%}
+                <tr>
+                  <th scope="row"> {{ th.sno }}</th>
+                  <td>{{ th.name }}</td>
+                  <td>{{ th.title }}</td>
+                  <td>{{ th.date }}</td>
+                  <td><button class="btn btn-primary text-uppercase">EDIT </button></td>
+                  <td><button class="btn btn-primary text-uppercase">DELETE </button></td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+        </div>
+       
+{% endblock %}
